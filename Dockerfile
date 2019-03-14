@@ -5,8 +5,8 @@ RUN mkdir -p /root/PyOne /data/db /data/log /data/aria2/download && \
   touch /data/aria2/aria2.session
 RUN apt-get update && apt-get install -y git
 RUN git clone https://github.com/abbeyokgo/PyOne.git
-COPY PyOne/ /root/PyOne
-COPY aria2.conf /data/aria2/
+COPY /PyOne/ /root/PyOne
+COPY /PyOne/aria2.conf /data/aria2/
 
 WORKDIR /root/PyOne/
 
